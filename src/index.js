@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
+// react-router
+import { BrowserRouter as Router } from "react-router-dom";
+
 // apollo
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
@@ -13,8 +16,10 @@ const client = new ApolloClient({
 });
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
+  <Router>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </Router>,
   document.getElementById("root")
 );
