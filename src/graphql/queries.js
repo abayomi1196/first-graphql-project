@@ -32,3 +32,15 @@ export const GET_SINGLE_CHARACTER = gql`
     }
   }
 `;
+
+export const GET_SEARCHED_CHARACTERS = gql`
+  query getCharactersBySearchTerm($name: String!) {
+    characters(filter: { name: $name }) {
+      results {
+        id
+        name
+        image
+      }
+    }
+  }
+`;

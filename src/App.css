@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .App {
   max-width: 70rem;
   margin: 10rem auto;
@@ -49,4 +53,37 @@
 .appLink:hover {
   background-color: #ebe5e5;
   box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+  display: flex;
+  margin-bottom: 45px;
+}
+
+.form__input {
+  max-width: 450px;
+  width: 100%;
+  padding: 10px 6px;
+  font-size: 16px;
+  transition: all 0.2s ease-out;
+}
+
+.form__input:focus {
+  box-shadow: -1px 2px 4px 1px rgba(0, 0, 0, 0.04);
+  outline: none;
+}
+
+.form__btn {
+  color: #545151;
+  background-color: #fefefe;
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid #545151;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.form__btn:hover {
+  transition: all 0.2s ease-in;
+  background-color: #ebe5e5;
 }
