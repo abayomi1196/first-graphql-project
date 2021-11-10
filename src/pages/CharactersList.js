@@ -1,22 +1,22 @@
 import { useQuery } from "@apollo/client";
 import { GET_CHARACTERS } from "../graphql/queries";
 
+import CharacterCard from "../components/CharacterCard";
+import Loader from "../components/Loader";
+
 function CharactersList() {
   const { data, loading, error } = useQuery(GET_CHARACTERS);
 
   console.log(data, loading, error);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader />;
 
   if (error) return <p>something went wrong</p>;
 
   return (
     <div className='characterList'>
       {data.characters.results.map((character) => (
-        <div key={character.id}>
-          <img src={character.image} alt='' />
-          <h2>{character.name}</h2>
-        </div>
+        <CharacterCard character={character} key={character.id} />
       ))}
     </div>
   );

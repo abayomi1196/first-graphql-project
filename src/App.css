@@ -8,3 +8,9 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   text-align: center;
 }
+
+.loader {
+  height: 50vh;
+  display: grid;
+  place-content: center;
+}
