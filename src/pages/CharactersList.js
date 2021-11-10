@@ -30,9 +30,14 @@ function CharactersList() {
 
   return (
     <>
-      <Search handleSubmit={handleSubmit} name={name} setName={setName} />
+      <Search
+        handleSubmit={handleSubmit}
+        name={name}
+        setName={setName}
+        setSearchTerm={setSearchTerm}
+      />
 
-      {!searchTerm && (
+      {(!name || !searchTerm) && (
         <div className='characterList'>
           {data.characters.results.map((character) => (
             <CharacterCard character={character} key={character.id} />
@@ -42,7 +47,7 @@ function CharactersList() {
 
       {searchData && (
         <div className='characterList'>
-          {searchData.characters.results.map((character) => (
+          {searchData?.characters.results.map((character) => (
             <CharacterCard character={character} key={character.id} />
           ))}
         </div>
