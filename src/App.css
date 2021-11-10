@@ -5,12 +5,48 @@
 
 .characterList {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   text-align: center;
+  grid-gap: 20px;
+}
+
+.characterList img {
+  width: 100%;
 }
 
 .loader {
   height: 50vh;
   display: grid;
   place-content: center;
+}
+
+.singleCharacter {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.singleCharacter__content {
+  margin-left: 2em;
+}
+
+.singleCharacter__location {
+  margin-top: 2em;
+}
+
+.appLink {
+  text-decoration: none;
+  color: #545151;
+  background-color: #fefefe;
+  display: inline-block;
+  padding: 10px 16px;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+  transition: all 0.2s ease-in;
+  margin-left: 20px;
+}
+
+.appLink:hover {
+  background-color: #ebe5e5;
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
 }

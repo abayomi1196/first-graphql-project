@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function CharacterCard({ character }) {
   return (
-    <div>
+    <Link to={`/${character.id}`}>
       <img src={character.image} alt='' />
       <h2>{character.name}</h2>
-    </div>
+    </Link>
   );
 }
 

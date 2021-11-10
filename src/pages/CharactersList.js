@@ -7,10 +7,7 @@ import Loader from "../components/Loader";
 function CharactersList() {
   const { data, loading, error } = useQuery(GET_CHARACTERS);
 
-  console.log(data, loading, error);
-
   if (loading) return <Loader />;
-
   if (error) return <p>something went wrong</p>;
 
   return (
